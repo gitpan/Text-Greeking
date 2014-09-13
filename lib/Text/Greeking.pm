@@ -1,9 +1,8 @@
 package Text::Greeking;
+$Text::Greeking::VERSION = '0.13';
+use 5.006;
 use strict;
 use warnings;
-
-use vars qw( $VERSION );
-$VERSION = 0.12;
 
 # make controllable eventually.
 my @punc   = split('', '..........??!');
@@ -116,26 +115,23 @@ TEXT
 
 __END__
 
-=begin pod
-
 =head1 NAME
 
-Text::Greeking - a module for generating meaningless text
-that creates the illusion of the finished document. 
+Text::Greeking - generate meaningless text (eg to fill a page when designing)
 
 =head1 SYNOPSIS
 
  #!/usr/bin/perl -w
  use strict;
- 
+
  use Text::Greeking;
- 
+
  my $g = Text::Greeking->new;
  $g->paragraphs(1,2) # min of 1 paragraph and a max of 2
  $g->sentences(2,5) # min of 2 sentences per paragraph and a max of 5
  $g->words(8,16) # min of 8 words per sentence and a max of 16
  print $g->generate; # use default Lorem Ipsum source
-  
+
 =head1 DESCRIPTION
 
 Greeking is the use of random letters or marks to show the
@@ -208,7 +204,19 @@ sentence. Default is a minimum of 5 and a maximum of 15.
 
 =head1 SEE ALSO
 
-http://en.wikipedia.org/wiki/Greeking
+L<WWW::Lipsum> - an interface to L<lipsum.com|http://www.lipsum.com>.
+
+L<Text::Lorem::JA> - generate Japanese filler text.
+
+L<WWW::Lipsum::Chinese> - generate Chinese filler text.
+
+L<https://metacpan.org/pod/Text::Greeking::zh_TW> - another module for
+generate Chinese filler text.
+
+L<Template::Plugin::Text::Greeking> - a template toolkit plugin
+for C<Text::Greeking>.
+
+The L<wikipedia page on Greeking|http://en.wikipedia.org/wiki/Greeking>.
 
 =head1 TO DO
 
@@ -220,13 +228,9 @@ http://en.wikipedia.org/wiki/Greeking
 
 =back
 
-=head1 PARTICIPATION
+=head1 REPOSITORY
 
-I welcome and accept patches in diff format. If you wish to
-hack on this code, please fork the git repository found at:
-L<http://github.com/tima/perl-text-greeking/>. If you have
-something to push back to my repository, just use the "pull
-request" button on the github site.
+L<https://github.com/neilbowers/Text-Greeking>
 
 =head1 LICENSE
 
@@ -242,4 +246,3 @@ reserved.
 
 =cut
 
-=end pod

@@ -1,26 +1,23 @@
---- #YAML:1.0
-name:               Text-Greeking
-version:            0.12
-abstract:           a module for generating meaningless text
+---
+abstract: 'generate meaningless text (eg to fill a page when designing)'
 author:
-    - Timothy Appnel <tima@cpan.org>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Timothy Appnel <tima@cpan.org>'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    perl:  5.006
-resources:
-    bugtracker:  http://rt.cpan.org/Public/Dist/Display.html?Name=Text-Greeking
-    license:     http://dev.perl.org/licenses/
-    repository:  http://github.com/tima/perl-text-greeking
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.54
+  Test::More: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.141170'
+license: artistic
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Text-Greeking
+requires:
+  perl: '5.006'
+  strict: '0'
+  warnings: '0'
+resources:
+  homepage: https://github.com/neilbowers/Text-Greeking
+  repository: https://github.com/neilbowers/Text-Greeking.git
+version: '0.13'
