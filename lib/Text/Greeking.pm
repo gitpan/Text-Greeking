@@ -1,5 +1,5 @@
 package Text::Greeking;
-$Text::Greeking::VERSION = '0.13';
+$Text::Greeking::VERSION = '0.14';
 use 5.006;
 use strict;
 use warnings;
@@ -121,16 +121,13 @@ Text::Greeking - generate meaningless text (eg to fill a page when designing)
 
 =head1 SYNOPSIS
 
- #!/usr/bin/perl -w
- use strict;
-
  use Text::Greeking;
 
  my $g = Text::Greeking->new;
- $g->paragraphs(1,2) # min of 1 paragraph and a max of 2
- $g->sentences(2,5) # min of 2 sentences per paragraph and a max of 5
- $g->words(8,16) # min of 8 words per sentence and a max of 16
- print $g->generate; # use default Lorem Ipsum source
+ $g->paragraphs(1,2)    # min of 1 paragraph and a max of 2
+ $g->sentences(2,5)     # min of 2 sentences per paragraph and a max of 5
+ $g->words(8,16)        # min of 8 words per sentence and a max of 16
+ print $g->generate;    # use default Lorem Ipsum source
 
 =head1 DESCRIPTION
 
@@ -206,15 +203,30 @@ sentence. Default is a minimum of 5 and a maximum of 15.
 
 L<WWW::Lipsum> - an interface to L<lipsum.com|http://www.lipsum.com>.
 
+L<Text::Lorem> - generate random latin-looking text.
+
+L<Text::Lorem::More> - class that provides methods for generating various
+types of structured latin filler text, such as names, words, sentences,
+paragraphs, titles, hostnames, etc.
+
 L<Text::Lorem::JA> - generate Japanese filler text.
 
 L<WWW::Lipsum::Chinese> - generate Chinese filler text.
 
-L<https://metacpan.org/pod/Text::Greeking::zh_TW> - another module for
-generate Chinese filler text.
+L<Text::Greeking::zh_TW> - another module for generating Chinese filler text.
+
+L<Acme::CorpusScrambler> - generates filler text based on text that you
+provide; falls back to the using the corpus for L<Text::Greeking::zh_TW>.
 
 L<Template::Plugin::Text::Greeking> - a template toolkit plugin
 for C<Text::Greeking>.
+
+L<Faker> - an extensible framework for generating fake data,
+including I<lorem ipsum> style filler text.
+
+L<Lingua::ManagementSpeak> - generates filler text in 'management speak'.
+
+L<Toby Inkster|https://metacpan.org/author/TOBYINK> - pedant.
 
 The L<wikipedia page on Greeking|http://en.wikipedia.org/wiki/Greeking>.
 
